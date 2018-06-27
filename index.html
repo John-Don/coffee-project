@@ -18,34 +18,38 @@
     </div>
     <!--  CONTENT    -->
     <div id = "roastStyle" class = "text-center mx-auto py-2">
-        Select Your Roast Style!
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>ALL</option>
-                <!--                   <option disabled selected value>select a roast</option> -->
-                <!--                   <option>ALL</option> -->
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-            </select>
-        </form>
+        <div>
+            Select Your Roast Style!
+        </div>
+
+        <div>
+            <form>
+                <label for="roast-selection"></label>
+                <select id ="roast-selection" class="coffeeInputs">
+                    <option>ALL</option>
+                    <!--                   <option disabled selected value>select a roast</option> -->
+                    <!--                   <option>ALL</option> -->
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+            </form>
+        </div>
     </div>
 
     <div class = "text-center">
         Search for a Coffee by name!
-        <input type="text" id="myInput" onkeyup="coffeeText()" placeholder="Search for a Coffee">
+        <div>
+            <input type="text" id="myInput" onkeyup="coffeeText()" placeholder="Search for a Coffee" class = "coffeeInputs">
+        </div>
     </div>
 
-    <div>
-        <ul id="coffeeList"></ul>
-    </div>
 
     <!--   END OF CONTAINER   -->
 </div>
-
-<!--             <input type="text" id = "userSearches" placeholder = "Type in a Coffee name"/> -->
-
+<div>
+    <div class="row" id="coffeeList"></div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -1,8 +1,8 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div id="coffee" class="col-4">';
-    html += '<li><a href="www.google.com">' + coffee.name + ' ' + '<span class = "roast">' + coffee.roast +' </span>'+ '</li>';
+    var html = '<div id="coffee" class ="col-sm-6 text-center">';
+    html += '<div class="coffeeTest"><a href="www.google.com">' + coffee.name + ' ' + '<span class = "roast">' + coffee.roast +' </span>'+ '</div>';
     html += '</div>';
 
     return html;
@@ -73,7 +73,7 @@ function myFunction() {
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
     ul = document.getElementById("coffeeList");
-    li = ul.getElementsByTagName('li');
+    li = ul.getElementsByClassName('coffeeTest');
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
