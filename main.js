@@ -1,8 +1,8 @@
-"use strict"
+"use strict";
 
 function renderCoffee(coffee) {
     var html = '<div class="col-sm-12 col-md-6 col-lg-4 text-center renderingCoffee" id="coffee">';
-    html += '<div><a href="www.google.com">' + coffee.name + ' ' + coffee.roast + '</div>';
+    html += '<div><a href="http://www.google.com">' + coffee.name + ' ' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
@@ -57,7 +57,6 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
-// submitButton.addEventListener('click', updateCoffees);
 
 var roastFilter;
 function roast(type) {
@@ -68,14 +67,12 @@ function myFunction() {
 }
 
 function coffeeText() {
-    // Declare variables
     var input, filter, ul, li, a, i;
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
     ul = document.getElementById("coffeeList");
     li = ul.getElementsByClassName('renderingCoffee');
 
-    // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -85,7 +82,7 @@ function coffeeText() {
         }
     }
 }
-// Store
-localStorage.setItem("lastname", "Smith");
-// Retrieve
-console.log(localStorage.getItem("lastname"));
+// // Store
+// localStorage.setItem("lastname", "Smith");
+// // Retrieve
+// console.log(localStorage.getItem("lastname"));
