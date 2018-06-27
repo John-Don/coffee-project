@@ -1,11 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div id="coffee">';
+    html += '<li><a href="www.google.com">' + coffee.name + ' ' + coffee.roast + '</li>';
+    html += '</div>';
 
     return html;
 }
@@ -24,6 +22,9 @@ function updateCoffees(e) {
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
+            filteredCoffees.push(coffee);
+        }
+        else if (selectedRoast == 'ALL'){
             filteredCoffees.push(coffee);
         }
     });
@@ -47,11 +48,44 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+coffees = coffees.reverse();
 
-var tbody = document.querySelector('#coffees');
+var tbody = document.querySelector('#coffeeList');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
+
+var roastFilter;
+function roast(type) {
+    return type == roastFilter;
+}
+function myFunction() {
+    document.getElementById("coffees").innerHTML = coffees.filter(roast);
+}
+
+function coffeeText() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("coffeeList");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+// Store
+localStorage.setItem("lastname", "Smith");
+// Retrieve
+console.log(localStorage.getItem("lastname"));
