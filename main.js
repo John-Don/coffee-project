@@ -57,7 +57,6 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
-submitButton.addEventListener('click', updateCoffees);
 
 var roastFilter;
 function roast(type) {
