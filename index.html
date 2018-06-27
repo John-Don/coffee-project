@@ -17,9 +17,9 @@
         </h1>
     </div>
     <!--  CONTENT    -->
-    <div id = "roastStyle" class = "text-center mx-auto py-2">
+    <div id = "roastStyle" class = "text-center mx-auto py-2 setWidth">
         Select Your Roast Style!
-        <form>
+        <form class = "roast-selection text-center">
             <label for="roast-selection"></label>
             <select id="roast-selection">
                 <option>ALL</option>
@@ -34,11 +34,11 @@
 
     <div class = "text-center">
         Search for a Coffee by name!
-        <input type="text" id="myInput" onkeyup="coffeeText()" placeholder="Search for a Coffee">
+        <input type="text" id="myInput" onkeyup="coffeeText()" placeholder="Search for a Coffee" >
     </div>
 
     <div>
-        <ul id="coffeeList"></ul>
+        <div class = "row" id="coffeeList"></div>
     </div>
 
     <!--   END OF CONTAINER   -->
