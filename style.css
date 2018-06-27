@@ -6,9 +6,17 @@ h1 {
     width: 90%;
 }
 
+.roast {
+    font-size: 12px;
+}
+
+.coffee {
+    margin: 0;
+}
 
 #coffee{
     width: 100%;
+    margin: 0;
 }
 #myInput {
     width: 100%; /* Full-width */
