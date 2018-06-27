@@ -1,8 +1,8 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div id="coffee" class ="col-sm-6 col-md-4 text-center">';
-    html += '<div class="coffeeTest"><a href="www.google.com">' + coffee.name + ' ' + '<span class = "roast">' + coffee.roast +' </span>'+ '</div>';
+    var html = '<div id="coffee">';
+    html += '<li><a href="www.google.com">' + coffee.name + ' ' + coffee.roast + '</li>';
     html += '</div>';
 
     return html;
@@ -57,6 +57,7 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
 
 var roastFilter;
 function roast(type) {
@@ -66,13 +67,13 @@ function myFunction() {
     document.getElementById("coffees").innerHTML = coffees.filter(roast);
 }
 
-function myFunction() {
+function coffeeText() {
     // Declare variables
     var input, filter, ul, li, a, i;
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
     ul = document.getElementById("coffeeList");
-    li = ul.getElementsByClassName('coffeeTest');
+    li = ul.getElementsByTagName('li');
 
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
@@ -84,3 +85,7 @@ function myFunction() {
         }
     }
 }
+// Store
+localStorage.setItem("lastname", "Smith");
+// Retrieve
+console.log(localStorage.getItem("lastname"));

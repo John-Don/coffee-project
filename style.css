@@ -2,27 +2,18 @@ h1 {
     text-align: center;
 }
 
-.coffeeInputs {
-    max-width: 300px;
+#roast-selection {
     width: 90%;
 }
 
-.roast {
-    font-size: 12px;
-}
-
-.coffeeList {
-    overflow: hidden;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 #coffee{
     width: 100%;
-    margin: 0;
 }
 #myInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 100%; /* Full-width */
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
@@ -52,13 +43,6 @@ h1 {
     background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 
-.coffeeTest{
-    background-color: lightgrey;
-    border: black solid 1px;
-    padding: 5px;
-
-}
-
 /* SMALL SCREENS */
 @media screen and (min-width: 576px) {
 }
@@ -67,9 +51,4 @@ h1 {
 }
 /* LARGE SCREENS */
 @media (min-width: 992px) {
-    /*#roast-selection {*/
-        /*width: 300px;*/
-        /*text-align: left;*/
-    /*}*/
-
 }

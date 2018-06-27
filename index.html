@@ -18,50 +18,36 @@
     </div>
     <!--  CONTENT    -->
     <div id = "roastStyle" class = "text-center mx-auto py-2">
-        <div>
-            Select Your Roast Style!
-        </div>
-
-        <div>
-            <form>
-                <label for="roast-selection"></label>
-                <select id ="roast-selection" class="coffeeInputs">
-                    <option>ALL</option>
-                    <!--                   <option disabled selected value>select a roast</option> -->
-                    <!--                   <option>ALL</option> -->
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
-            </form>
-        </div>
+        Select Your Roast Style!
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>ALL</option>
+                <!--                   <option disabled selected value>select a roast</option> -->
+                <!--                   <option>ALL</option> -->
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+        </form>
     </div>
 
     <div class = "text-center">
         Search for a Coffee by name!
-        <div>
-            <input type="text" id="myInput" onkeyup="coffeeText()" placeholder="Search for a Coffee" class = "coffeeInputs">
-        </div>
+        <input type="text" id="myInput" onkeyup="coffeeText()" placeholder="Search for a Coffee">
     </div>
 
+    <div>
+        <ul id="coffeeList"></ul>
+    </div>
 
     <!--   END OF CONTAINER   -->
 </div>
-<div>
-    <div class="row" id="coffeeList"></div>
-</div>
-<form id="addCoffee">
-    <input type="text" name="name" >
-    <select id="roast">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <!--<input type="submit" value="submit" id="coffeeInput">-->
-</form>
-<script>
 
-</script>
+<!--             <input type="text" id = "userSearches" placeholder = "Type in a Coffee name"/> -->
+
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
